@@ -3,10 +3,10 @@ class Customer:
         self.first_name = first_name
         self.last_name = last_name
         self.social_security_number = social_security_number
-        self.account = None  # Initially, the customer doesn't have an account linked yet
+        self.account = None
 
     def link_account(self, account):
-        self.account = account  # link the account to the customer
+        self.account = account
 
 
 class BankAccount:

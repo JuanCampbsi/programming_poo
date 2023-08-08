@@ -1,8 +1,8 @@
 class Customer:
-    def __init__(self, first_name, last_name, social_security_number):
+    def __init__(self, first_name, last_name, cpf_number):
         self.first_name = first_name
         self.last_name = last_name
-        self.social_security_number = social_security_number
+        self.cpf_number = cpf_number
         self.account = None
 
     def link_account(self, account):

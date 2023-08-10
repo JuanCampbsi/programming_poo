@@ -1,21 +1,64 @@
 class BankAccount:
+    __number = int
+    __branch = str
+    __balance = int
+    __customer = str
+
     def __init__(self, number: int, branch: str, balance=0):
-        self.number = number
-        self.branch = branch
-        self.balance = balance
-        self.customer = str
+        """
 
-    def __str__(self):
-        return f"Conta {self.number} - Agência {self.branch} - Saldo {self.balance}"
+        Args:
+            number:
+            branch:
+            balance:
+        """
+        self.__number = number
+        self.__branch = branch
+        self.__balance = balance
+        self.__customer = str
 
-    def link_customer(self, customer):
-        self.customer = customer
-        customer.link_account(self)
+    def __str__(self) -> str:
+        """
 
-    def deposit(self, amount):
+        Returns:
+            str:
+        """
+        return f"Conta {self.__number} - Agência {self.__branch} - Saldo {self.__balance}"
+
+    def link_customer(self, customer) -> object:
+        """
+
+        Args:
+            customer: 
+
+        Returns:
+            object:
+        """
+        self.__customer = customer
+        return customer.link_account(self)
+
+    def deposit(self, amount) -> int:
+        """
+
+        Args:
+            amount:
+
+        Returns:
+            int:
+        """
         if amount > 0:
-            self.balance += amount
+            self.__balance += amount
+        return amount
 
-    def withdraw(self, amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
+    def withdraw(self, amount) -> int:
+        """
+
+        Args:
+            amount:
+
+        Returns:
+            int:
+        """
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+        return amount

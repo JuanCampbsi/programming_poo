@@ -11,16 +11,10 @@ class Customer:
     @classmethod
     def search(cls, nome) -> str:
         search_name = ""
-        for cliente in cls.__list_cliente:
-            if cliente.__first_name == nome:
-                search_name = cliente.__first_name
-                return search_name
-            else:
-                return "Nome não encontrado"
+        matching_names = [cliente.__first_name for cliente in cls.__list_cliente if cliente.__first_name == nome]
+        return matching_names[0] if matching_names else "Nome não encontrado"
 
     @staticmethod
     def operating(value) -> str:
         return f"Teste  método estático: {value}"
-
-
 

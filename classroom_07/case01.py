@@ -19,7 +19,7 @@ class Veiculo:
     def modelo(self, modelo):
         self.__modelo = modelo
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Marca: {self.marca}, Modelo: {self.modelo}"
 
 
@@ -36,7 +36,7 @@ class Carro(Veiculo):
     def portas(self, portas):
         self.__portas = portas
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Carro - {super().__str__()}, Portas: {self.__portas}"
 
 
@@ -53,7 +53,7 @@ class Moto(Veiculo):
     def cilindradas(self, cilindradas):
         self.__cilindradas = cilindradas
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Moto - {super().__str__()}, Cilindradas: {self.__cilindradas}"
 
 
